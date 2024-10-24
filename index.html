@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution Tasks 3.8</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js">defer</script>
+    <style>
+        body { font-family: Roboto, sans-serif; }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper"> <!-- Основной контейнер -->
+        <div class="content">
+            <h1>Решение задания по написанию кода<br/></h1>
+            <h2>3.8. PHP. Базы данных</h2>
+        </div>
+
+        <!-- Контейнер для обеих форм -->
+        <div class="form-wrapper">
+           <!-- Форма для отзывов -->
+<form id="reviewForm" action="process.php" method="POST">
+    <h3>Оставить отзыв</h3>
+    <div class="form-group">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="review">Отзыв:</label>
+        <textarea id="review" name="review" rows="3" required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="rating">Оценка:</label>
+        <select id="rating" name="rating" required>
+            <option value="5">5 - Отлично</option>
+            <option value="4">4 - Хорошо</option>
+            <option value="3">3 - Нормально</option>
+            <option value="2">2 - Плохо</option>
+            <option value="1">1 - Ужасно</option>
+        </select>
+    </div>
+    <button type="submit">Отправить отзыв</button>
+</form>
+
+<!-- Форма для отмены заказа -->
+<form id="cancelOrderForm" action="process.php" method="POST">
+    <h3>Отменить заказ</h3>
+    <div class="form-group">
+        <label for="order_id">Номер заказа:</label>
+        <input type="text" id="order_id" name="order_id" required>
+    </div>
+    <div class="form-group">
+        <label for="reason">Причина отмены:</label>
+        <textarea id="reason" name="reason" rows="3" required></textarea>
+    </div>
+    <button type="submit">Отменить заказ</button>
+</form>
+        </div>
+    </div>
+
+    <footer class="stripe-footer">
+            <b>3.8. PHP. Базы данных</b>
+    </footer>
+</div> <!-- Блок wrapper -->
+
+</body>
+</html>

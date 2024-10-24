@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(189, 166, 217);
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 130px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 130px);
+    background-image: url('./Img/maxresdefaultPHP.jpg');
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    text-align: center;
+    margin-top: 20px; /* Отступ сверху для контента */
+    z-index: 1; /* Контент поверх фонового изображения */
+}
+
+h1 {
+    font-size: 30px;
+    color: rgb(99, 2, 131);
+    font-weight: lighter;
+    text-align: center;
+    margin-top: 0;
+    margin-top: 5px; /* Отступ от верхнего края страницы */
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 32px;
+    color: rgb(122, 147, 2);
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 40px; /* Отступ между h2 и h3 */
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.75);
+}
+
+h3 {
+    font-size: 20px;
+    color: rgb(175, 11, 131);
+    margin-bottom: 20px; /* Отступ под заголовком формы */
+    text-align: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Контейнер для всех форм */
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    gap: 20px; /* Расстояние между формами */
+    padding: 20px;
+}
+
+/* Индивидуальные стили для каждой формы */
+form {
+    background-color: rgba(240, 248, 255, 1); /* Светло-голубой оттенок */
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc; /* Светлая рамка */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+    width: 300px; /* Ширина формы */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Отступ между группами полей */
+}
+
+label {
+    display: block; /* Переводим в блочный элемент */
+    text-align: center; /* Центрируем текст */
+    margin-bottom: 5px; /* Отступ между подписью и полем ввода */
+}
+
+textarea, input, select {
+    width: 100%; /* Поля ввода занимают всю ширину группы */
+    padding: 8px; /* Внутренний отступ для удобства */
+    border: 1px solid #ccc; /* Обводка поля ввода */
+    border-radius: 5px; /* Закругление углов */
+}
+
+button {
+    padding: 10px 15px; /* Внутренние отступы для кнопки */
+    background-color: rgb(122, 147, 2); /* Цвет фона кнопки */
+    color: white; /* Цвет текста кнопки */
+    border: none; /* Убираем обводку */
+    border-radius: 5px; /* Закругление углов */
+    cursor: pointer; /* Указатель при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+button:hover {
+    background-color: rgb(99, 2, 131); /* Изменение цвета фона при наведении */
+}
+
+.stripe-footer {
+    background: #541964;
+    color: #bd47bf;
+    text-align: center;
+    padding: 0.4rem;
+    width: 100%;
+    margin-top: auto;
+    position: relative;
+    z-index: 1;
+}
